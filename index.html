@@ -43,20 +43,32 @@
       padding: 20px;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
+
+    .download-link {
+      text-decoration: none;
+      color: white;
+    }
+
+    .try-link {
+      text-decoration: none;
+      color: #0078d4;
+    }
   </style>
 </head>
 <body>
   <header>
     <div class="container">
       <h1>Windivs Website</h1>
-      <fluent-button appearance="accent" class="titlebar-download">Download Windivs</fluent-button>
+      <fluent-button appearance="accent" class="titlebar-download">
+        <a class="download-link" href="https://github.com/Windivs-Devs/windivs/releases/download/6.0.6519.1.7dev/bootcd.iso" target="_blank">Download Windivs</a>
+      </fluent-button>
     </div>
   </header>
 
   <div class="container content">
     <h3>Welcome to Windivs</h3>
-    <p>Windivs is a distrbution of ReactOS made to modify ReactOS and add more features.</p>
-    <p>Smooth preformance on old PCs and modern PCs! Try Windivs Today</p>
+    <p>Windivs is a distribution of ReactOS made to modify ReactOS and add more features.</p>
+    <p>Smooth performance on old PCs and modern PCs! <a class="try-link" href="https://github.com/Windivs-Devs/windivs/releases/download/6.0.6519.1.7dev/bootcd.iso" target="_blank">Try Windivs Today</a></p>
   </div>
 </body>
 </html>
