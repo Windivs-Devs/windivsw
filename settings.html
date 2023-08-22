@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings - Windivs</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    /* Dark Theme */
+    body.dark {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    header {
+      background-color: #0078d4;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .settings-section {
+      margin-bottom: 20px;
+      padding: 20px;
+      background-color: white;
+      border-radius: 4px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 36px;
+      font-weight: bold;
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    label {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    select, input[type="checkbox"] {
+      font-size: 16px;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      background-color: inherit;
+      color: inherit;
+    }
+
+    #save-button {
+      background-color: #0078d4;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 18px;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    /* Flip Animation */
+    @keyframes flip {
+      from {
+        transform: perspective(800px) rotateY(0);
+      }
+      to {
+        transform: perspective(800px) rotateY(180deg);
+      }
+    }
+
+    .flipping {
+      animation: flip 0.5s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Settings</h1>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="settings-section">
+      <h2>General Settings</h2>
+      <label for="theme">Select Theme:</label>
+      <select id="theme" onchange="toggleDarkTheme()">
+        <option value="light">Light</option>
+        <option value="dark">Dark</option>
+      </select>
+
+      <label for="notifications">Enable Notifications:</label>
+      <input type="checkbox" id="notifications">
+    </div>
+
+    <div class="settings-section">
+      <h2>Privacy Settings</h2>
+      <label for="analytics">Enable Analytics:</label>
+      <input type="checkbox" id="analytics">
+      
+      <label for="location">Share Location:</label>
+      <input type="checkbox" id="location">
+    </div>
+    
+    <button id="save-button" onclick="saveConfig()">Save Settings</button>
+  </div>
+
+  <script>
+    function toggleDarkTheme() {
+      const body = document.body;
+      const themeSelect = document.getElementById('theme');
+      
+      // Apply flip animation when changing themes
+      body.classList.add('flipping');
+      setTimeout(() => {
+        body.classList.toggle('dark', themeSelect.value === 'dark');
+        body.classList.remove('flipping');
+
+        // Store the theme preference in localStorage
+        localStorage.setItem('theme', themeSelect.value);
+      }, 500); // Adjust timing to match the animation duration
+    }
+
+    function saveConfig() {
+      const themeSelect = document.getElementById('theme');
+      const notificationsCheckbox = document.getElementById('notifications');
+      const analyticsCheckbox = document.getElementById('analytics');
+      const locationCheckbox = document.getElementById('location');
+      
+      const config = {
+        theme: themeSelect.value,
+        notifications: notificationsCheckbox.checked,
+        analytics: analyticsCheckbox.checked,
+        location: locationCheckbox.checked
+      };
+
+      const configText = JSON.stringify(config);
+
+      // Simulate downloading the configuration as a text file
+      const downloadLink = document.createElement('a');
+      downloadLink.href = 'data:text/plain;charset=utf-8,' + encodeURIComponent(configText);
+      downloadLink.download = 'config.txt';
+      downloadLink.style.display = 'none';
+      document.body.appendChild(downloadLink);
+      downloadLink.click();
+      document.body.removeChild(downloadLink);
+    }
+
+    // Apply theme on page load based on stored preference
+    const storedTheme = localStorage.getItem('theme');
+    if (storedTheme) {
+      document.body.classList.toggle('dark', storedTheme === 'dark');
+      document.getElementById('theme').value = storedTheme;
+    }
+  </script>
+</body>
+</html>
