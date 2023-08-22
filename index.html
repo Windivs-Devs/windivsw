@@ -1,15 +1,62 @@
-<html>
-  <head>
-    <title>Windivs Website??</title>
-    <script type="module" src="https://unpkg.com/@fluentui/web-components"></script>
-    <style>
-      .titlebar-download {
-        float:right;
-      }
-    </style>
-  </head>
-  <body>
-  <h3>Windivs Website</h3>
-  <fluent-button appearance="accent" class="titlebar-download">Download Windivs</fluent-button>
-  </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Windivs</title>
+  <script type="module" src="https://unpkg.com/@fluentui/web-components"></script>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+
+    header {
+      background-color: #0078d4;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .titlebar-download {
+      float: right;
+      margin-top: 10px;
+    }
+
+    .content {
+      background-color: white;
+      border-radius: 4px;
+      padding: 20px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Windivs Website</h1>
+      <fluent-button appearance="accent" class="titlebar-download">Download Windivs</fluent-button>
+    </div>
+  </header>
+
+  <div class="container content">
+    <h3>Welcome to Windivs</h3>
+    <p>Windivs is a distrbution of ReactOS made to modify ReactOS and add more features.</p>
+    <p>Smooth preformance on old PCs and modern PCs! Try Windivs Today</p>
+  </div>
+</body>
 </html>
