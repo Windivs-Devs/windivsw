@@ -1,93 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Windivs</title>
-  <script type="module" src="https://unpkg.com/@fluentui/web-components"></script>
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WinDivs OS</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Custom inline styles can be added here */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
 
-    header {
-      background-color: #0078d4;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 0;
-      text-align: center;
-    }
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
-    }
+        header ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
 
-    .content {
-      background-color: white;
-      border-radius: 4px;
-      padding: 20px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    }
+        header li {
+            display: inline;
+            margin-right: 20px;
+        }
 
-    h1 {
-      margin: 0;
-      font-size: 36px;
-      font-weight: bold;
-    }
+        header a {
+            text-decoration: none;
+            color: #fff;
+        }
 
-    h3 {
-      margin-top: 0;
-      font-size: 24px;
-      font-weight: bold;
-    }
+        section {
+            padding: 40px;
+            text-align: center;
+        }
 
-    p {
-      font-size: 18px;
-      line-height: 1.6;
-      margin-bottom: 15px;
-    }
+        h1 {
+            font-size: 36px;
+            color: #333;
+        }
 
-    .try-link {
-      text-decoration: none;
-      color: #0078d4;
-      font-weight: bold;
-    }
+        p {
+            font-size: 18px;
+            color: #666;
+        }
 
-    .settings-button {
-      background-color: transparent;
-      border: none;
-      color: white;
-      font-size: 18px;
-      cursor: pointer;
-    }
-  </style>
+        .cta-button {
+            display: inline-block;
+            background-color: #007BFF;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <div class="container">
-      <h1>Windivs</h1>
-      <button class="settings-button" onclick="goToSettings()">Settings</button>
-    </div>
-  </header>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#download">Download</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <div class="container content">
-    <h3>Welcome to Windivs</h3>
-    <p>Windivs is a distribution of ReactOS designed to enhance and expand its features.</p>
-    <p>Experience smooth performance on both old and modern PCs. <a class="try-link" href="https://github.com/Windivs-Devs/windivs/releases/download/6.0.6519.1.7dev/bootcd.iso" target="_blank">Try Windivs Now</a></p>
-  </div>
+    <section id="home">
+        <h1>Welcome to WinDivs OS</h1>
+        <p>Your free and open-source ReactOS-based operating system.</p>
+        <a href="#download" class="cta-button">Download Now</a>
+    </section>
 
-  <script>
-    function goToSettings() {
-      window.location.href = "settings.html"; // Replace with your actual settings page URL
-    }
-  </script>
+    <section id="features">
+        <h2>Features</h2>
+        <p>Discover the power of WinDivs OS:</p>
+        <!-- Add your feature list here -->
+    </section>
 </body>
 </html>
