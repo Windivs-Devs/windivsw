@@ -1,40 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="global.css">
-    <script type="text/javascript">
-      async function getStarsCount(repo) {
-        const response = await fetch(`https://api.github.com/repos/${repo}/stargazers`);
-        const data = await response.json();
-        return data.length;
-      }
-      window.onload = (event) => {
-        getStarsCount('Windivs-Devs/windivs').then(count => {
-          console.log(count)
-          document.getElementById('mainStars').innerText = count + " "
-        });
-        getStarsCount('Windivs-Devs/windivsw').then(count => {
-          console.log(count)
-          document.getElementById('websiteStars').innerText = count + " "
-        })
-      }
-    </script>
-  </head>
-  <body>
-    <div id="topdiv">
-      
-      <header>
-        <nav>
-          <a href="#gallery">Gallery</a>
-          <a href="https://github.com/Windivs-Devs/windivs/releases/tag/6.01.6568.1.7dev" id="download">Download</a>
-          <a href="https://github.com/Windivs-Devs" id="github_container"><i class="fa fa-github"></i></a>
-        </nav>
-      </header>
-      <h1><span id="title"><span id="windivs">Windivs</span> OS</span></h1>
-      <h2>Your <span class="highlight">free and open-source, ReactOS-based</span> operating system.</h2>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="global.css">
+  <script type="text/javascript">
+    async function getStarsCount(repo) {
+      const response = await fetch(`https://api.github.com/repos/${repo}/stargazers`);
+      const data = await response.json();
+      return data.length;
+    }
+    window.onload = (event) => {
+      getStarsCount('Windivs-Devs/windivs').then(count => {
+        console.log(count)
+        document.getElementById('mainStars').innerText = count + " "
+      });
+      getStarsCount('Windivs-Devs/windivsw').then(count => {
+        console.log(count)
+        document.getElementById('websiteStars').innerText = count + " "
+      })
+    }
+  </script>
+</head>
+
+<body>
+  <div id="topdiv">
+
+    <header>
+      <nav>
+        <a href="#gallery">Gallery</a>
+        <a href="https://github.com/Windivs-Devs/windivs/releases/tag/6.01.6568.1.7dev" id="download">Download</a>
+        <a href="https://github.com/Windivs-Devs" id="github_container"><i class="fa fa-github"></i></a>
+      </nav>
+    </header>
+    <h1><span id="title"><span id="windivs">Windivs</span> OS</span></h1>
+    <h2>Your <span class="highlight">free and open-source, ReactOS-based</span> operating system.</h2>
 
     <div class="grid" id="gallery">
 
@@ -44,27 +46,31 @@
         </a>
         <p>Disk Cleanup: Efficiently clean up unnecessary files and optimize your system's performance.</p>
       </div>
-      
+
       <div class="gridElement">
         <a target="_blank" href="notepad.png">
           <img src="notepad.png" alt="Notepad">
         </a>
         <p>Notepad: Enjoy a simple and versatile text editor for all your note-taking needs.</p>
       </div>
-      
-      
+
+
       <div class="gridElement" id="windivscard">
         <img src="windivs.png" alt="WinDivs">
         <p>Discover an innovative and fast OS right now!</p>
-      </div>    
+      </div>
     </div>
+
     <div id="githubWidget">
       <div id="stats">
-        <a class="ghLink" href="https://github.com/windivs-devs/windivs">windivs-devs/windivs: <span id="mainStars">Pending... </span><i style="color:#DAAA3F; font-size: 18px" class="fa fa-star stars"></i></a>
-        <a class="ghLink" href="https://github.com/Windivs-Devs/windivsw/">windivs-devs/windivsw: <span id="websiteStars">Pending... </span><i style="color:#DAAA3F; font-size: 18px" class="fa fa-star stars"></i></p>
+        <a class="ghLink" href="https://github.com/windivs-devs/windivs">windivs-devs/windivs: <span
+            id="mainStars">Pending... </span><i style="color:#DAAA3F; font-size: 18px" class="fa fa-star stars"></i></a>
+        <a class="ghLink" href="https://github.com/Windivs-Devs/windivsw/">windivs-devs/windivsw: <span
+            id="websiteStars">Pending... </span><i style="color:#DAAA3F; font-size: 18px" class="fa fa-star stars"></i>
+        </a>
       </div>
       <i class="fa fa-github" id="widgetOpener"></i>
     </div>
 </body>
-</html>
 
+</html>
