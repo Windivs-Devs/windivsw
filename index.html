@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="global.css">
+    <script type="text/javascript">
+      async function getStarsCount(repo) {
+        const response = await fetch(`https://api.github.com/repos/${repo}/stargazers`);
+        const data = await response.json();
+        return data.length;
+      }
+      window.onload = (event) => {
+        getStarsCount('Windivs-Devs/windivs').then(count => {
+          console.log(count)
+          document.getElementById('mainStars').innerText = count + " "
+        });
+        getStarsCount('Windivs-Devs/windivsw').then(count => {
+          console.log(count)
+          document.getElementById('websiteStars').innerText = count + " "
+        })
+      }
+    </script>
   </head>
   <body>
     <div id="topdiv">
@@ -40,6 +57,13 @@
         <img src="windivs.png" alt="WinDivs">
         <p>Discover an innovative and fast OS right now!</p>
       </div>    
+    </div>
+    <div id="githubWidget">
+      <div id="stats">
+        <a class="ghLink" href="https://github.com/windivs-devs/windivs">windivs-devs/windivs: <span id="mainStars">Pending... </span><i style="color:#DAAA3F; font-size: 18px" class="fa fa-star stars"></i></a>
+        <a class="ghLink" href="https://github.com/Windivs-Devs/windivsw/">windivs-devs/windivsw: <span id="websiteStars">Pending... </span><i style="color:#DAAA3F; font-size: 18px" class="fa fa-star stars"></i></p>
+      </div>
+      <i class="fa fa-github" id="widgetOpener"></i>
     </div>
 </body>
 </html>

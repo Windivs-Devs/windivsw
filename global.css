@@ -12,6 +12,7 @@
 h1,
 h2,
 p,
+a,
 ul,
 nav {
   font-family: "Inter";
@@ -190,4 +191,45 @@ body {
 
 #github {
     transform: scale(20%);
+}
+
+div#githubWidget {
+    position: fixed;
+    display: grid;
+    bottom: 0;
+    right: 0;
+    text-align: end;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+div#githubWidget i {
+    font-size: 48px;
+    color: white;
+    }
+
+#stats {
+    display: none;
+    width: 225px;
+}
+
+div#githubWidget:hover > #stats {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    text-align: end;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-color: #00000050;
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 25px;
+}
+
+#stats > a:nth-child(1) {
+    padding-bottom: 10px;
 }
