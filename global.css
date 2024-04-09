@@ -18,6 +18,12 @@ nav {
   font-style: normal;
 }
 
+h2 {
+    font-weight: 400;
+    color: #88888890;
+    font-size: 24px;
+}
+
 nav {
   background-color: #00000000;
   backdrop-filter: blur(10px);
@@ -49,11 +55,10 @@ nav {
   background-size: 200% 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-weight: 700;
+  font-weight: 600;
 }
 
-h1,
-h2 {
+h1 {
   letter-spacing: -1.92px;
 }
 
@@ -94,16 +99,10 @@ a {
   color: white;
 }
 
-h2 {
-  font-size: 32px;
-  margin: 0;
-  margin-top: 10px;
-  font-weight: 600;
-}
-
 h1 {
   font-size: 48px;
   margin: 0;
+  color: #ffffff95;
   font-weight: 700;
 }
 
