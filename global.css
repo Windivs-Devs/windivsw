@@ -153,7 +153,7 @@ body {
   padding: 10px;
   border: double 4px transparent;
   border-radius: 40px;
-  background-image: linear-gradient(30deg, rgba(0,0,0, 0.85), rgba(0,0,0, 0.8)),
+  background-image: linear-gradient(30deg, rgba(0,0,0, 0.9), rgba(0,0,0, 0.75)),
     linear-gradient(90deg, #0091ff, #00027b);
   background-origin: border-box;
   background-clip: padding-box, border-box;
