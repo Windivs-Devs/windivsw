@@ -3,73 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <h1 style="color:blue;">WinDivs OS</h1>
-    <link rel="stylesheet" href="https://www.w3schools.com/html/styles.css">
-</head>
-<body>
-    <header>
+    <link rel="stylesheet" href="global.css">
+  </head>
+  <body>
+    <div id="topdiv">
+      
+      <header>
         <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#features">Features</a></li>
-                <li><a href="https://github.com/Windivs-Devs/windivs/releases/tag/6.01.6568.1.7dev" class="cta-button">Try WinDivs Today</a></li>
-            </ul>
+          <a href="#gallery">Gallery</a>
+
+          <a href="https://github.com/Windivs-Devs/windivs/releases/tag/6.01.6568.1.7dev" id="download">Download</a>
         </nav>
-    </header>
-
+      </header>
+      <h1><span id="title"><span id="windivs">Windivs</span> OS</span></h1>
+    
     <section id="home">
-        <h1>Welcome to WinDivs OS</h1>
-        <p>Your free and open-source ReactOS-based operating system.</p>
-        <style>
-div.gallery {
-  margin: 5px;
-  border: 1px solid #ccc;
-  float: left;
-  width: 180px;
-}
+      <p>Your <span class="highlight">free and open-source, ReactOS-based</span> operating system.</p>
+    </div>
+    <div class="grid">
 
-div.gallery:hover {
-  border: 1px solid #777;
-}
-
-div.gallery img {
-  width: 100%;
-  height: auto;
-}
-
-div.desc {
-  padding: 15px;
-  text-align: center;
-}
-</style>
-</head>
-<body>
-
-<div class="gallery">
-  <a target="_blank" href="diskcleanup.png">
-    <img src="diskcleanup.png" alt="Disk Cleanup" width="600" height="400">
-  </a>
-  <div class="desc">Disk Cleanup: Efficiently clean up unnecessary files and optimize your system's performance.</div>
-</div>
-
-<div class="gallery">
-  <a target="_blank" href="notepad.png">
-    <img src="notepad.png" alt="Notepad" width="600" height="400">
-  </a>
-  <div class="desc">Notepad: Enjoy a simple and versatile text editor for all your note-taking needs.</div>
-</div>
-
-
-<div class="gallery">
-  <a target="_blank" href="windivs.png">
-    <img src="windivs.png" alt="WinDivs" width="600" height="400">
-  </a>
-  <div class="desc">Discover a innovative and fast OS right now!</div>
-</div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><form action="https://github.com/Windivs-Devs/windivs/releases/">
-    <input type="submit" value="Download Windivs Today!" />
-</form>
-
+      <div class="gridElement">
+        <a target="_blank" href="diskcleanup.png">
+          <img src="diskcleanup.png" alt="Disk Cleanup">
+        </a>
+        <p>Disk Cleanup: Efficiently clean up unnecessary files and optimize your system's performance.</p>
+      </div>
+      
+      <div class="gridElement">
+        <a target="_blank" href="notepad.png">
+          <img src="notepad.png" alt="Notepad">
+        </a>
+        <div class="desc">Notepad: Enjoy a simple and versatile text editor for all your note-taking needs.</div>
+      </div>
+      
+      
+      <div class="gridElement" id="windivscard">
+        <img src="windivs.png" alt="WinDivs">
+        <div class="desc">Discover a innovative and fast OS right now!</div>
+      </div>    
+    </div>
 </body><!-- HTML !-->
 
 </html>
